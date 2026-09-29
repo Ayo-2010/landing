@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { ArrowUpRight, LayoutGrid, Menu, X, ShoppingCart } from 'lucide-vue-next'
 import { useCart } from '../composables/useCart'
 import SideMenu from './SideMenu.vue'
+import Logo from './Logo.vue'
 
 const { itemCount } = useCart()
 
@@ -89,8 +90,7 @@ watch(
     >
       
       <div class="flex gap-2 justify-center items-center">
-        <span class="logo font-bold text-2xl sm:text-3xl border-4 px-0.5 py-0.5 text-center leading-none">Cn</span>
-        <span class="logo font-bold text-xl sm:text-3xl tracking-tight">Construction</span>
+        <Logo with-wordmark />
       </div>
 
       <nav class="hidden lg:block">
@@ -103,9 +103,9 @@ watch(
           <li><router-link class="text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/shop">Shop</router-link></li>
           <li><router-link class="text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/contact">Contact</router-link></li>
           <li>
-            <router-link class="text-white hover:text-orange-500 transition-colors active:text-orange-500 flex items-center gap-1.5" to="/cart">
+            <router-link class="relative text-white hover:text-orange-500 transition-colors active:text-orange-500 flex items-center gap-1.5" to="/cart">
               <ShoppingCart class="w-5 h-5" />
-              <span v-if="itemCount > 0" class="bg-orange-600 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">{{ itemCount }}</span>
+              <span v-if="itemCount > 0" class="absolute -top-2 -right-3 bg-orange-600 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">{{ itemCount }}</span>
             </router-link>
           </li>
         </ul>
@@ -165,7 +165,6 @@ watch(
           <li><router-link @click="isMobileMenuOpen = false" class="block text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/services">Services</router-link></li>
           <li><router-link @click="isMobileMenuOpen = false" class="block text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/shop">Shop</router-link></li>
           <li><router-link @click="isMobileMenuOpen = false" class="block text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/news">News</router-link></li>
-          <li><router-link @click="isMobileMenuOpen = false" class="block text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/contact">Contact</router-link></li>
           <li>
             <router-link @click="isMobileMenuOpen = false" class="flex items-center gap-2 text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/cart">
               Cart

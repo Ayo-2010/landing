@@ -18,8 +18,7 @@
       >
         <div class="flex items-center justify-between px-6 py-5 border-b border-white/10 sticky top-0 bg-zinc-900/95 backdrop-blur-md z-10">
           <router-link to="/" class="flex items-center gap-2" @click="close">
-            <span class="font-bold text-2xl border-4 px-0.5 py-0.5 text-center leading-none">Cn</span>
-            <span class="font-bold text-xl tracking-tight">Construction</span>
+            <Logo with-wordmark />
           </router-link>
 
           <button
@@ -109,6 +108,7 @@
 import { X, Phone, MapPin, Mail, Calendar, ArrowUpRight } from 'lucide-vue-next'
 import { Twitter, Instagram, Facebook, Linkedin } from 'lucide-vue-next'
 import posts from '../data/posts.ts'
+import Logo from './Logo.vue'
 
 defineProps({
   isOpen: Boolean

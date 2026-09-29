@@ -25,7 +25,7 @@ onUnmounted(() => {
 
 <template>
   <section class="relative z-10 w-full overflow-hidden bg-gray-900 text-white">
-    <div class="relative min-h-[600px] w-full">
+    <div class="relative min-h-[700px] w-full">
       <div v-for="(slide, index) in slides" :key="index"
         class="absolute inset-0 transition-opacity duration-800 ease-in-out flex items-center"
         :class="activeIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'">

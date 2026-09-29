@@ -5,8 +5,7 @@
     <div class="max-w-7xl mx-auto space-y-12">
       <div class="flex flex-col lg:flex-row justify-between items-center gap-6 pb-10 border-b border-gray-800/80">
         <div class="flex gap-2 justify-center items-center text-white">
-          <span class="logo font-bold text-3xl sm:text-4xl border-4 px-1 py-0.5 text-center leading-none">Cn</span>
-          <span class="logo font-bold text-2xl sm:text-4xl tracking-tight">Construction</span>
+          <Logo with-wordmark />
         </div>
 
         <div class="flex flex-col md:flex-row items-center gap-6 w-full lg:w-auto">
@@ -129,6 +128,7 @@
 <script setup>
 import { ref } from 'vue'
 import {useRoute} from 'vue-router'
+import Logo from './Logo.vue'
 
 const email = ref('')
 const route = useRoute()

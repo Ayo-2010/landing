@@ -77,22 +77,26 @@ const router = createRouter({
     {
       name : "Shop",
       path : '/shop',
-      component : () => import('../pages/Shop.vue')
+      component : () => import('../pages/Shop.vue'),
+      meta : { lightTop : true }
     },
     {
       name : "ShopDetail",
       path : '/shop/:shop',
-      component : () => import('../pages/[shop].vue')
+      component : () => import('../pages/[shop].vue'),
+      meta : { lightTop : true }
     },
     {
       name : "Cart",
       path : '/cart',
-      component : () => import('../pages/Cart.vue')
+      component : () => import('../pages/Cart.vue'),
+      meta : { lightTop : true }
     },
     {
       name : "Checkout",
       path : '/checkout',
-      component : () => import('../pages/Checkout.vue')
+      component : () => import('../pages/Checkout.vue'),
+      meta : { lightTop : true }
     },
   ],
   scrollBehavior(to, from, savedPosition) {

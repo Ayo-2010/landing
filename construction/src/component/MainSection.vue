@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center relative h-[300px] bg-cover bg-bottom bg-no-repeat bg-gray-400">
+  <div class="flex items-center justify-center relative h-[450px] bg-cover bg-bottom bg-no-repeat bg-gray-400">
     <div 
       class="absolute inset-0 z-0 bg-cover bg-center"
       style="background-image: url('/images/process-bg1-1.png');"
