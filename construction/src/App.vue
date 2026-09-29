@@ -5,7 +5,7 @@
 
 <template>
   <Header />
-  <RouterView />
+  <RouterView  class="w-full overflow-x-hidden"/>
   <Footer />
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full h-[350px] text-white font-sans overflow-visible pt-12">
+  <section class="relative w-full h-[350px] text-white font-sans overflow-visible pt-12 pb-300">
     <div 
       class="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
       style="background-image: url('/images/process-bg1-1.png');"
