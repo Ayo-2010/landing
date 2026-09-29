@@ -76,13 +76,13 @@ const activeTab = ref(0)
                 </div>
 
                 <div>
-                  <a 
-                    :href="services[activeTab].link" 
+                  <router-link
+                    :to="services[activeTab].link"
                     class="inline-flex items-center space-x-2 bg-gray-900 hover:bg-amber-500 hover:text-black text-white font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md"
                   >
                     <span>More Details</span>
                     <ArrowUpRight class="w-4 h-4" />
-                  </a>
+                  </router-link>
                 </div>
               </div>
             </div>

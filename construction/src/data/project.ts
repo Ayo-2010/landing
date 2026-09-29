@@ -8,25 +8,25 @@ export interface ProjectHighlight {
 
 const projects: ProjectHighlight[] = [
   {
-    title: 'General Construction1111111111111',
+    title: 'General Construction',
     subtitle: 'Building',
     date: 'Building since 09,01,2024',
     image: '/images/project1_1.png',
-    link: '/pages/project-page/building-construction'
+    link: '/project/general-construction'
   },
   {
-    title: 'Commercial Renovation222222222222222222222',
+    title: 'Commercial Renovation',
     subtitle: 'Building',
     date: 'Building since 09,01,2024',
     image: '/images/project1_2.png',
-    link: '/pages/project-page/building-construction'
+    link: '/project/renovation-remodeling'
   },
   {
-    title: 'Architecture Design333333333333333333333333333',
+    title: 'Architecture Design',
     subtitle: 'Building',
     date: 'Building since 09,01,2024',
     image: '/images/project1_3.png',
-    link: '/pages/project-page/building-construction'
+    link: '/project/building-construction-7'
   }
 ]
 

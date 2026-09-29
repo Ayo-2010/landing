@@ -32,13 +32,13 @@
             </p>
 
             <div>
-              <a 
-                href="/about" 
+              <router-link
+                to="/about"
                 class="inline-flex items-center space-x-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold py-3.5 px-6 rounded-full transition duration-300 shadow-md"
               >
                 <span>Know More About Company</span>
                 <i class="ri-arrow-right-up-line text-lg"></i>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

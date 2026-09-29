@@ -44,20 +44,20 @@ import projects from '../data/portfolio.ts'
             </div>
 
             <div class="space-y-4 max-w-lg mt-auto">
-              <a :href="project.link" class="block">
+              <router-link :to="project.link" class="block">
                 <h3 class="text-xl sm:text-2xl font-bold text-white leading-tight">
                   {{ project.title }}
                 </h3>
-              </a>
+              </router-link>
 
               <div>
-                <a 
-                  :href="project.link"
+                <router-link
+                  :to="project.link"
                   class="inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-xs transition-colors duration-200"
                 >
                   <span>Explore Project</span>
                   <ArrowRight class="w-4 h-4" />
-                </a>
+                </router-link>
               </div>
             </div>
           </div>

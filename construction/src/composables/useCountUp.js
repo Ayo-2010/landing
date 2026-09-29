@@ -5,7 +5,6 @@ export function useCountUp(targetNumber, duration = 2500) {
   let animationFrame = null
 
   const startCount = () => {
-    // Cancel any running animation before starting a new one
     if (animationFrame) cancelAnimationFrame(animationFrame)
 
     const startTime = performance.now()

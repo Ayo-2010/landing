@@ -19,13 +19,13 @@
           </div>
 
           <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <a 
-              :href="project.link" 
-              class="w-12 h-12 bg-white text-slate-900 hover:bg-orange-600 hover:text-white rounded-full flex items-center justify-center transition-colors duration-200 shadow-lg"
+            <router-link
+              :to="project.link"
               title="View Project"
+              class="w-12 h-12 bg-white text-slate-900 hover:bg-orange-600 hover:text-white rounded-full flex items-center justify-center transition-colors duration-200 shadow-lg"
             >
               <Eye :size="20" />
-            </a>
+            </router-link>
           </div>
         </div>
 
@@ -35,11 +35,11 @@
               {{ project.category }}
             </span>
 
-            <a :href="project.link" class="block group/title">
+            <router-link :to="project.link" class="block group/title">
               <h4 class="text-xl font-bold text-slate-900 group-hover/title:text-orange-600 transition-colors mb-4">
                 {{ project.title }}
               </h4>
-            </a>
+            </router-link>
           </div>
 
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-auto">
@@ -48,13 +48,13 @@
               <span class="text-sm font-semibold text-slate-700">{{ project.date }}</span>
             </div>
 
-            <a 
-              :href="project.link" 
+            <router-link 
+              :to="`${project.link}`"
               class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-slate-900 hover:text-orange-600 transition-colors"
             >
               View Details
               <ArrowUpRight :size="16" />
-            </a>
+            </router-link>
           </div>
         </div>
 

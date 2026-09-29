@@ -18,13 +18,13 @@ import posts from '../data/posts.ts'
         </div>
 
         <div>
-          <a 
-            href="/news/news" 
+          <router-link
+            to="/news"
             class="inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition-colors duration-200"
           >
             <span>View All Post</span>
             <ArrowUpRight class="w-4 h-4" />
-          </a>
+          </router-link>
         </div>
       </div>
   
@@ -60,22 +60,22 @@ import posts from '../data/posts.ts'
               </div>
 
   
-              <a :href="post.link" class="inline">
-                <h3 class="inline text-xl font-extrabold text-slate-900 leading-snug transition-colors duration-300 hover:text-orange-600 bg-gradient-to-r from-orange-600 to-orange-600 bg-[length:0%_2px] hover:bg-[length:100%_2px] bg-no-repeat bg-bottom transition-[background-size,color] duration-300">
-                  {{ post.title }}
-                </h3>
-              </a>
+                <router-link :to="post.link" class="inline">
+                  <h3 class="inline text-xl font-extrabold text-slate-900 leading-snug transition-colors duration-300 hover:text-orange-600 bg-gradient-to-r from-orange-600 to-orange-600 bg-[length:0%_2px] hover:bg-[length:100%_2px] bg-no-repeat bg-bottom transition-[background-size,color] duration-300">
+                    {{ post.title }}
+                  </h3>
+                </router-link>
             </div>
           </div>
 
           <div class="p-8 pt-4">
-            <a 
-              :href="post.link"
+            <router-link
+              :to="post.link"
               class="inline-flex items-center space-x-2 font-bold text-xs uppercase tracking-wider px-6 py-3.5 border border-slate-300 bg-transparent text-slate-700 transition-all duration-300 hover:bg-orange-600 hover:border-orange-600 hover:text-white"
             >
               <span>READ MORE</span>
               <ArrowUpRight class="w-4 h-4" />
-            </a>
+            </router-link>
           </div>
 
         </div>

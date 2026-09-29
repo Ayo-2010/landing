@@ -20,4 +20,4 @@
 
 <script setup lang="ts">
 import { ArrowUpRight } from "lucide-vue-next";
-</script>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxrrxxxxxxxrfxxxxxxxxxxxxxxxxxxFXxrX%F$XXXXXXXXXXXXxxxxxxxfxr54t4y5frrrrrrrrrrrrrrrrrrrzzzzzzzzzzzzzzzzza                                                                                rfrddra1aaaaa4etr54,4t 4555f5ggg tghsnghst
+</script>                                                                      rfrddra1aaaaa4etr54,4t 4555f5ggg tghsnghst

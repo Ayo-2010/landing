@@ -50,16 +50,16 @@
         <div class="space-y-4">
           <h3 class="text-white font-bold text-xl">Useful Links</h3>
           <div class="grid grid-cols-2 gap-x-9 gap-y-3 text-sm font-semibold">
-            <a href="#" class="hover:text-orange-500 transition-colors">About</a>
-            <a href="#" class="hover:text-orange-500 transition-colors">Our Team</a>
-            <a href="#" class="hover:text-orange-500 transition-colors">What We Do</a>
-            <a href="#" class="hover:text-orange-500 transition-colors">Careers</a>
-            <a href="#" class="hover:text-orange-500 transition-colors">News & Article</a>
-            <a href="#" class="hover:text-orange-500 transition-colors">Testimonials</a>
-            <a href="#" class="hover:text-orange-500 transition-colors">Success Story</a>
-            <a href="#" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-orange-500 transition-colors">FAQ's</a>
-            <a href="#" class="hover:text-orange-500 transition-colors">Terms of use</a>
+            <router-link to="/about" class="hover:text-orange-500 transition-colors">About</router-link>
+            <router-link to="/team" class="hover:text-orange-500 transition-colors">Our Team</router-link>
+            <router-link to="/services" class="hover:text-orange-500 transition-colors">What We Do</router-link>
+            <router-link to="/careers" class="hover:text-orange-500 transition-colors">Careers</router-link>
+            <router-link to="/news" class="hover:text-orange-500 transition-colors">News & Article</router-link>
+            <router-link to="/testimonials" class="hover:text-orange-500 transition-colors">Testimonials</router-link>
+            <router-link to="/work" class="hover:text-orange-500 transition-colors">Success Story</router-link>
+            <router-link to="/legal/privacy" class="hover:text-orange-500 transition-colors">Privacy Policy</router-link>
+            <router-link to="/legal/faq" class="hover:text-orange-500 transition-colors">FAQ's</router-link>
+            <router-link to="/legal/terms" class="hover:text-orange-500 transition-colors">Terms of use</router-link>
           </div>
         </div>
 
@@ -118,9 +118,9 @@
       <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-gray-800/80 text-sm font-semibold">
         <p>© 2026 <span class="text-white font-bold">Construction</span> | All rights reserved</p>
         <div class="flex items-center gap-6">
-          <a href="#" class="hover:text-orange-500 transition-colors">Terms & Condition</a>
-          <a href="#" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-orange-500 transition-colors">Contact Us</a>
+          <router-link to="/legal/terms" class="hover:text-orange-500 transition-colors">Terms & Condition</router-link>
+          <router-link to="/legal/privacy" class="hover:text-orange-500 transition-colors">Privacy Policy</router-link>
+          <router-link to="/contact" class="hover:text-orange-500 transition-colors">Contact Us</router-link>
         </div>
       </div>
     </div>

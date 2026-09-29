@@ -60,11 +60,11 @@ onUnmounted(() => {
             </p>
 
             <div>
-              <a href="/contact"
+              <router-link to="/contact"
                 class="inline-flex items-center space-x-2 bg-amber-500 hover:bg-amber-600 text-black font-bold py-3.5 px-7 rounded-md transition duration-300 transform hover:-translate-y-0.5 shadow-lg">
                 <span>REQUEST A FREE ESTIMATE</span>
                 <i class="ri-arrow-right-up-line text-lg"></i>
-              </a>
+              </router-link>
             </div>
 
           </div>

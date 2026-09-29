@@ -17,7 +17,7 @@ export interface Slide {
 
 const slides = ref<Slide[]>([
   {
-    bgImage: 'https://construz.windstripedesign.ro/images/hero/hero_bg_5_1.png',
+    bgImage: 'images/hero_bg_5_1.png',
     title: 'We Are Unsurpassed\nRoofing Services Agency',
     description: 'Protecting your home with premium materials and precision engineering. With over 7 years of trusted expertise, we deliver roofs built to last a lifetime.',
     ratings: [
@@ -27,7 +27,7 @@ const slides = ref<Slide[]>([
     ]
   },
   {
-    bgImage: 'https://construz.windstripedesign.ro/images/hero/hero_bg_5_2.png',
+    bgImage: 'images/hero_bg_5_2.png',
     title: 'Innovative Architecture\n& Modern Commercial Roofing',
     description: 'We merge advanced structural engineering with clean, modern design aesthetics to create commercial spaces that stand out and withstand the elements.',
     ratings: [
@@ -37,7 +37,7 @@ const slides = ref<Slide[]>([
     ]
   },
   {
-    bgImage: 'https://construz.windstripedesign.ro/images/hero/hero_bg_5_3.png',
+    bgImage: 'images/hero_bg_5_3.png',
     title: 'Crafting Sustainable\n& Reliable Structural Designs',
     description: 'From routine residential inspections to massive industrial installations, our certified specialists execute every project with absolute transparency and care.',
     ratings: [

@@ -9,7 +9,6 @@
         >
           WE BUILDING EVERYTHING THAT YOU NEEDED
         </h2>
-
         <p
           class="text-zinc-600 font-semibold text-sm sm:text-base leading-relaxed"
         >
@@ -69,13 +68,13 @@
         </div>
 
         <div class="pt-4">
-          <a
-            href="#"
+          <router-link
+            to="/work"
             class="inline-flex items-center gap-3 bg-zinc-900 hover:bg-orange-600 text-white font-bold text-xs tracking-wider uppercase px-8 py-4 transition-colors duration-200"
           >
             <span>EXPLORE OUR COMPANY</span>
             <ArrowUpRight class="w-4 h-4" />
-          </a>
+          </router-link>
         </div>
       </div>
       <div class="relative flex justify-center lg:justify-end">
@@ -121,8 +120,9 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import {  Sparkles, Building2, Award,  ArrowUpRight, BadgeCheck,  DraftingCompass,} from "lucide-vue-next";
-import { useCountUp } from "../composables/useCountUp";
 import HeadingBadge from "./HeadingBadge.vue";
+import { useCountUp } from "../composables/useCountUp";
+
 
 const countRef = ref(null);
 

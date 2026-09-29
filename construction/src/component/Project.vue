@@ -36,13 +36,13 @@
           >
             <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
-            <a
-              :href="project.link"
+            <router-link
+              :to="project.link"
               title="View Project"
               class="absolute right-6 top-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-orange-500 shadow-md transition-transform duration-200 hover:scale-110"
             >
               <Target class="h-5 w-5" />
-            </a>
+            </router-link>
 
             <div
               class="absolute inset-x-0 bottom-0 z-10 flex flex-wrap items-end justify-between gap-4 p-6 sm:gap-5 sm:p-10"
