@@ -53,7 +53,6 @@
             </div>
           </div>
 
-          <!-- Image links to member detail page -->
           <router-link :to="`/team/${member.slug}`" class="absolute right-5 mt-4 flex justify-end bottom-0">
             <img
               :src="member.image"

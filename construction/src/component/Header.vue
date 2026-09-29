@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onUnmounted, watch, onMounted } from 'vue'
+import { ref, computed, onUnmounted, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { ArrowUpRight, LayoutGrid, Menu, X, ShoppingCart } from 'lucide-vue-next'
 import { useCart } from '../composables/useCart'
@@ -9,7 +9,35 @@ const { itemCount } = useCart()
 
 const isMobileMenuOpen = ref(false)
 const isSideMenuOpen = ref(false)
+const isScrolled = ref(false)
 const route = useRoute()
+
+const SCROLL_THRESHOLD = 24
+const TOP_THRESHOLD = 8
+
+const LIGHT_TOP_ROUTES = ['/shop', '/cart', '/checkout']
+
+const hasDarkHero = computed(() => !LIGHT_TOP_ROUTES.some(path => route.path.startsWith(path)))
+
+let ticking = false
+
+const handleScroll = () => {
+  const y = window.scrollY
+
+  if (y <= TOP_THRESHOLD) {
+    isScrolled.value = false
+  } else if (y >= SCROLL_THRESHOLD) {
+    isScrolled.value = true
+  }
+
+  ticking = false
+}
+
+const onScroll = () => {
+  if (ticking) return
+  ticking = true
+  window.requestAnimationFrame(handleScroll)
+}
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
@@ -29,8 +57,16 @@ const handleKeyDown = (event) => {
   }
 }
 
-onMounted(() => window.addEventListener('keydown', handleKeyDown))
-onUnmounted(() => window.removeEventListener('keydown', handleKeyDown))
+onMounted(() => {
+  handleScroll()
+  window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('keydown', handleKeyDown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('keydown', handleKeyDown)
+})
 
 watch(
   () => route.path,
@@ -39,8 +75,18 @@ watch(
 </script>
 
 <template>
-  <header class="w-full bg-transparent shadow text-white">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4 px-4 sm:px-8 lg:px-16 font-bold">
+  <header
+    class="fixed top-0 left-0 right-0 z-50 text-white transition-all duration-300 ease-out"
+    :class="[
+      isScrolled || !hasDarkHero
+        ? 'bg-zinc-900/95 backdrop-blur-md shadow-lg shadow-black/10'
+        : 'bg-transparent'
+    ]"
+  >
+    <div
+      class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-8 lg:px-16 font-bold transition-all duration-300 ease-out"
+      :class="isScrolled ? 'py-2.5' : 'py-4'"
+    >
       
       <div class="flex gap-2 justify-center items-center">
         <span class="logo font-bold text-2xl sm:text-3xl border-4 px-0.5 py-0.5 text-center leading-none">Cn</span>

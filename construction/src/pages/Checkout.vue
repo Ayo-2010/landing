@@ -1,7 +1,6 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4 py-8 bg-white font-sans text-slate-800">
+  <div class="max-w-7xl mx-auto px-4 pt-28 pb-8 bg-white font-sans text-slate-800">
 
-    <!-- Breadcrumb -->
     <nav class="mb-6 text-xs text-slate-500 flex items-center gap-2">
       <router-link to="/" class="hover:text-orange-600 font-medium transition-colors">Home</router-link>
       <span>/</span>
@@ -12,7 +11,6 @@
       <span class="text-slate-800 font-semibold">Checkout</span>
     </nav>
 
-    <!-- Order Confirmation -->
     <div v-if="orderNumber" class="max-w-2xl mx-auto text-center py-16">
       <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-orange-50 border border-orange-100 flex items-center justify-center">
         <CheckCircle2 class="text-orange-600" :size="40" />
@@ -53,7 +51,6 @@
       </div>
     </div>
 
-    <!-- Empty Cart Redirect -->
     <div v-else-if="cartItems.length === 0" class="text-center py-20 bg-slate-50 rounded-xl border border-slate-100">
       <ShoppingCart class="mx-auto mb-4 text-slate-300" :size="64" />
       <h2 class="text-2xl font-bold text-slate-800 mb-2">Nothing to Check Out</h2>
@@ -68,13 +65,10 @@
       </router-link>
     </div>
 
-    <!-- Checkout Form -->
     <div v-else class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-      <!-- Forms -->
       <div class="lg:col-span-2 space-y-6">
 
-        <!-- Step Indicator -->
         <div class="flex items-center gap-2 sm:gap-4 text-xs font-semibold">
           <template v-for="(step, index) in steps" :key="step">
             <div class="flex items-center gap-2">
@@ -95,7 +89,6 @@
           </template>
         </div>
 
-        <!-- Contact Information -->
         <section class="border border-slate-100 rounded-xl p-6">
           <div class="flex items-center gap-2 mb-5">
             <span class="w-1 h-4 bg-orange-600 rounded-full inline-block"></span>
@@ -127,7 +120,6 @@
           <p v-if="errors.contact" class="mt-3 text-xs text-red-600">{{ errors.contact }}</p>
         </section>
 
-        <!-- Shipping Address -->
         <section class="border border-slate-100 rounded-xl p-6">
           <div class="flex items-center justify-between mb-5">
             <div class="flex items-center gap-2">
@@ -173,7 +165,6 @@
           <p v-if="errors.shipping" class="mt-3 text-xs text-red-600">{{ errors.shipping }}</p>
         </section>
 
-        <!-- Delivery Method -->
         <section class="border border-slate-100 rounded-xl p-6">
           <div class="flex items-center gap-2 mb-5">
             <span class="w-1 h-4 bg-orange-600 rounded-full inline-block"></span>
@@ -200,7 +191,6 @@
           </div>
         </section>
 
-        <!-- Payment -->
         <section class="border border-slate-100 rounded-xl p-6">
           <div class="flex items-center gap-2 mb-5">
             <span class="w-1 h-4 bg-orange-600 rounded-full inline-block"></span>
@@ -253,7 +243,6 @@
         </section>
       </div>
 
-      <!-- Order Summary -->
       <aside class="lg:col-span-1">
         <div class="bg-slate-50/50 border border-slate-100 rounded-xl p-6 sticky top-24">
           <h2 class="text-xl font-bold text-slate-900 mb-5 flex items-center gap-2">
@@ -274,7 +263,6 @@
             </li>
           </ul>
 
-          <!-- Coupon -->
           <div class="flex gap-2 mb-5">
             <input v-model.trim="couponCode" type="text" placeholder="Coupon code"
               class="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-orange-500" />

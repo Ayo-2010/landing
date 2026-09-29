@@ -46,7 +46,6 @@ textarea{
   border-radius: 0.25rem;
 }
 .bg-quote{
-  /* background-color: #3d3a3a; */
   background-image: url('/images/contact-bg4-1.png');
   background-size: cover;
   background-position: center;

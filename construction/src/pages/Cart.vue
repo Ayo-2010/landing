@@ -1,6 +1,5 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4 py-8 bg-white font-sans text-slate-800">
-    <!-- Breadcrumb -->
+  <div class="max-w-7xl mx-auto px-4 pt-28 pb-8 bg-white font-sans text-slate-800">
     <nav class="mb-6 text-xs text-slate-500 flex items-center gap-2">
       <router-link to="/" class="hover:text-orange-600 font-medium transition-colors">Home</router-link>
       <span>/</span>
@@ -10,7 +9,6 @@
     </nav>
 
     <main>
-      <!-- Empty Cart State -->
       <div v-if="cartItems.length === 0" class="text-center py-20 bg-slate-50 rounded-xl border border-slate-100">
         <ShoppingCart class="mx-auto mb-4 text-slate-300" :size="64" />
         <h2 class="text-2xl font-bold text-slate-800 mb-2">Your Cart is Empty</h2>
@@ -25,10 +23,8 @@
         </router-link>
       </div>
 
-      <!-- Cart with Items -->
       <div v-else class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        <!-- Cart Items -->
         <div class="lg:col-span-2 space-y-4">
           
           <div 
@@ -36,7 +32,6 @@
             :key="item.id"
             class="bg-white border border-slate-100 rounded-xl p-4 flex flex-col sm:flex-row gap-4"
           >
-            <!-- Product Image -->
             <div class="w-full sm:w-24 flex-shrink-0 bg-slate-50 rounded-lg p-3 flex items-center justify-center">
               <router-link :to="`/shop/${item.slug}`" class="block">
                 <img
@@ -47,7 +42,6 @@
               </router-link>
             </div>
 
-            <!-- Product Info -->
             <div class="flex-1 min-w-0">
               <router-link :to="`/shop/${item.slug}`" class="block">
                 <h3 class="font-bold text-slate-900 hover:text-orange-600 transition-colors mb-1">
@@ -66,9 +60,7 @@
               </div>
             </div>
 
-            <!-- Quantity & Remove -->
             <div class="flex items-center justify-between sm:flex-col sm:items-end gap-2 w-full sm:w-auto">
-              <!-- Quantity Selector -->
               <div class="flex items-center border border-slate-200 rounded-lg bg-white">
                 <button
                   @click="updateQuantity(item.id, item.quantity - 1)"
@@ -95,7 +87,6 @@
                 </button>
               </div>
 
-              <!-- Line Total -->
               <div class="text-right sm:w-auto">
                 <p class="font-bold text-slate-900">
                   ${{ (item.price * item.quantity).toFixed(2) }}
@@ -111,7 +102,6 @@
             </div>
           </div>
 
-          <!-- Cart Actions -->
           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-4 border-t border-slate-200">
             <button
               @click="clearCart"
@@ -130,7 +120,6 @@
           </div>
         </div>
 
-        <!-- Order Summary -->
         <aside class="lg:col-span-1">
           <div class="bg-slate-50/50 border border-slate-100 rounded-xl p-6 sticky top-24">
             <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">

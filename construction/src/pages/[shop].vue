@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4 py-8 bg-white font-sans text-slate-800">
+  <div class="max-w-7xl mx-auto px-4 pt-28 pb-8 bg-white font-sans text-slate-800">
     
     <nav class="mb-6 text-xs text-slate-500 flex items-center gap-2">
       <router-link to="/shop" class="hover:text-orange-600 font-medium transition-colors">Shop</router-link>
@@ -323,12 +323,10 @@ const product = ref(null)
 const quantity = ref(1)
 const activeTab = ref('description')
 
-// Comment form reactive properties
 const userRating = ref(5)
 const commentUser = ref('')
 const commentText = ref('')
 
-// Load active product based on Route Slug
 const loadProduct = () => {
   const currentSlug = route.params.shop
   const found = products.find(p => p.slug === currentSlug)
@@ -344,11 +342,9 @@ const loadProduct = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-
 onMounted(loadProduct)
 watch(() => route.params.shop, loadProduct)
 
-// Computed dynamic related products (Excludes active product)
 const relatedProducts = computed(() => {
   if (!product.value) return []
   return products

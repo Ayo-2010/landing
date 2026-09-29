@@ -18,7 +18,6 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <!-- Contact Form -->
           <div class="lg:col-span-7 border border-zinc-100 rounded-2xl p-6 sm:p-8 shadow-sm">
             <h2 class="text-xl font-bold text-zinc-900 mb-6">Send us a message</h2>
 
@@ -78,7 +77,6 @@
             </div>
           </div>
 
-          <!-- Contact Details -->
           <div class="lg:col-span-5 space-y-6">
             <div class="bg-[#f3f3f1] border border-zinc-100 rounded-2xl p-6 sm:p-8">
               <h2 class="text-xl font-bold text-zinc-900 mb-6">Office details</h2>

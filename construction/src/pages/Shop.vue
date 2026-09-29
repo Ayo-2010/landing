@@ -1,11 +1,9 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4 py-8 bg-white font-sans text-slate-800">
+  <div class="max-w-7xl mx-auto px-4 pt-28 pb-8 bg-white font-sans text-slate-800">
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
       
-      <!-- SIDEBAR -->
       <aside class="space-y-8">
         
-        <!-- Search Widget -->
         <div>
           <div class="flex items-center gap-2 mb-4">
             <span class="w-1 h-4 bg-orange-600 rounded-full inline-block"></span>
@@ -31,7 +29,6 @@
           </div>
         </div>
 
-        <!-- Categories Widget -->
         <div class="bg-slate-50/50 p-6 rounded border border-slate-100">
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center gap-2">
@@ -65,7 +62,6 @@
           </ul>
         </div>
 
-        <!-- Tags Widget -->
         <div class="bg-slate-50/50 p-6 rounded border border-slate-100">
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center gap-2">
@@ -98,9 +94,7 @@
 
       </aside>
 
-      <!-- MAIN PRODUCT GRID -->
       <main class="lg:col-span-3">
-        <!-- Active Filters Bar -->
         <div v-if="selectedCategory || selectedTag || searchQuery" class="mb-6 flex flex-wrap items-center gap-2 bg-slate-50 p-3 rounded border border-slate-100 text-xs">
           <span class="font-bold text-slate-500 uppercase tracking-wider text-[10px]">Active Filters:</span>
           
@@ -124,14 +118,12 @@
           </button>
         </div>
 
-        <!-- Products Grid -->
         <div v-if="filteredProducts.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div
             v-for="product in filteredProducts"
             :key="product.id"
             class="group text-center flex flex-col items-center"
           >
-            <!-- Image Box -->
             <div class="w-full bg-slate-50/80 rounded border border-slate-100/60 p-6 mb-4 flex items-center justify-center min-h-[220px]">
               <router-link :to="`/shop/${product.slug}`" class="block">
                 <img
@@ -142,7 +134,6 @@
               </router-link>
             </div>
 
-            <!-- Rating Stars -->
             <div class="flex justify-center items-center gap-1 mb-2">
               <Star
                 v-for="star in 5"
@@ -152,14 +143,12 @@
               />
             </div>
 
-            <!-- Title -->
             <router-link :to="`/shop/${product.slug}`" class="block mb-1">
               <h4 class="text-base font-bold text-slate-900 hover:text-orange-600 transition-colors">
                 {{ product.name }}
               </h4>
             </router-link>
 
-            <!-- Pricing -->
             <div class="flex items-center justify-center gap-2 text-sm">
               <span v-if="product.originalPrice" class="text-slate-400 line-through font-medium">
                 ${{ product.originalPrice.toFixed(2) }}
@@ -171,7 +160,6 @@
           </div>
         </div>
 
-        <!-- Empty State -->
         <div v-else class="text-center py-16 bg-slate-50 rounded-lg border border-slate-100">
           <p class="text-slate-500 font-medium">No products match your selected criteria.</p>
           <button 
@@ -227,7 +215,6 @@ const tags = ref([
   'Design', 'Industry'
 ])
 
-// Dynamically compute category counts based on total products
 const categories = computed(() => {
   const catMap = {
     'Construction': 0,

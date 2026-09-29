@@ -72,7 +72,6 @@
           </div>
           <div>
             <h3 class="text-white font-bold text-xl mb-3">Email Address</h3>
-            <!-- <p class="text-sm font-semibold text-white mb-1">Get in Touch !</p> -->
             <a href="mailto:support@gmail.com" class="text-sm text-gray-400 font-semibold hover:text-orange-500 transition-colors">
               support@gmail.com
             </a>
@@ -133,7 +132,6 @@ import {useRoute} from 'vue-router'
 
 const email = ref('')
 const route = useRoute()
-
 
 const handleSubscribe = () => {
   email.value = ''
