@@ -16,9 +16,7 @@ const route = useRoute()
 const SCROLL_THRESHOLD = 24
 const TOP_THRESHOLD = 8
 
-const LIGHT_TOP_ROUTES = ['/shop', '/cart', '/checkout']
-
-const hasDarkHero = computed(() => !LIGHT_TOP_ROUTES.some(path => route.path.startsWith(path)))
+const hasDarkHero = computed(() => !route.meta.lightTop)
 
 let ticking = false
 
@@ -101,7 +99,6 @@ watch(
           <li><router-link class="text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/work">Work</router-link></li>
           <li><router-link class="text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/news">News</router-link></li>
           <li><router-link class="text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/shop">Shop</router-link></li>
-          <li><router-link class="text-white hover:text-orange-500 transition-colors" active-class="text-orange-500" to="/contact">Contact</router-link></li>
           <li>
             <router-link class="relative text-white hover:text-orange-500 transition-colors active:text-orange-500 flex items-center gap-1.5" to="/cart">
               <ShoppingCart class="w-5 h-5" />
